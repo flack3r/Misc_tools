@@ -7,8 +7,8 @@ def check_refs(fun):
 	refs_list = []
 	if addr != BADADDR:
 			cross_refs = CodeRefsTo( addr, 0)
-			print "[*]refs to %s" %(fun)
-			print "======================"
+			#print "[*]refs to %s" %(fun)
+			#print "======================"
 			for ref in cross_refs:
 					print "%08x" %(ref)
 					refs_list.append(ref)
@@ -64,7 +64,6 @@ def Check_get( fun ):
 			print "[*]possible exploit refs 0x%x" %(refs)
 
 def man():
-	print "[1] def check_refs(fun_name) => check func reference"
-	print "[2] def Check_get(fun_name) => check req_get_cstream_var"
-	print "[3] def Mark(addr, find_string) => marking argument"
-	print "[4] def MarkClear() => Marking Clear"
+	print "[1] def Check_get(fun_name) => check req_get_cstream_var"
+	print "[2] def Mark(addr, find_string) => marking argument"
+	print "[3] def MarkClear() => Marking Clear"
